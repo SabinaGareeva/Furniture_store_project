@@ -334,6 +334,10 @@ img {
   display: block;
 }
 
+.user-nav__item--burger {
+  display: none;
+}
+
 .user-nav__item a:focus,
 .user-nav__item a:hover {
   opacity: 0.8;
@@ -1114,7 +1118,13 @@ img {
 }
 
 @media(max-width:426px) {
+  .page-main .flex {
+    justify-content: center;
+  }
 
+  .novelties-chair .flex {
+    justify-content: center;
+  }
 
   .chair-twilight img {
     width: 350px;
@@ -1165,6 +1175,9 @@ img {
 
 @media(max-width:376px) {
 
+  .novelties-chair {
+    justify-content: center;
+  }
 
   .chair-twilight img {
     width: 280px;
@@ -1403,7 +1416,7 @@ img {
 /* секция последний шанс */
 .last-change {
   position: relative;
-  margin-bottom: 166px;
+  margin-bottom: 111px;
 }
 
 .last-change::before {
@@ -1561,8 +1574,7 @@ img {
   border: 0;
   cursor: pointer;
   z-index: 1;
-
-  display: none;
+display: none;
 
 }
 
@@ -1589,6 +1601,63 @@ img {
   .change__slider-pagination {
     display: block;
   }
+
+  .last-change .swiper-scrollbar {
+    bottom: -20px;
+    width: calc(100% - 15%);
+    height: 2px;
+    display: block;
+  }
+
+  .last-change .swiper-pagination {
+    top: auto;
+    bottom: -32px;
+    right: -573px;
+    width: auto;
+    height: auto;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    left: 240px
+  }
+
+  .swiper-change {
+    position: relative;
+  }
+}
+
+@media(max-width:768px) {
+  .last-change .swiper-pagination {
+    right: -430px;
+  }
+}
+
+@media(max-width:426px) {
+  .last-change {
+    margin-bottom: 70px;
+  }
+
+  .last-change .swiper-pagination {
+    right: -88px;
+  }
+
+  .last-change .swiper-scrollbar {
+    width: calc(100% - 20%);
+  }
+}
+
+@media(max-width:376px) {
+  .last-change .swiper-pagination {
+    right: -62px;
+  }
+
+  .change-height {
+    width: 343px;
+  }
+
+  .change-height::before {
+    width: inherit;
+  }
 }
 
 @media(max-width:321px) {
@@ -1596,34 +1665,18 @@ img {
     width: 288px;
   }
 
-  .change-height::before {
-    width: inherit;
-  }
-
-  .last-change .swiper-scrollbar {
-    bottom: -20px;
-    left: 24px;
-    width: calc(100% - 80px);
-    height: 2px;
-    display: block;
-  }
-  .last-change .swiper-pagination{top: auto;
+  .last-change .swiper-pagination {
     bottom: -32px;
     right: 0;
-    width: auto;
-    height: auto;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 26px;
-  left:240px}
-    .swiper-change{position: relative;}
-
-
+    left: 240px
+  }
 }
 
 /* footer */
 .footer-main {
-  margin-bottom: 64px;
+  padding-bottom: 64px;
+  background-color: #fff;
+  padding-top: 80px;
 }
 
 .footer-contact {
@@ -1643,15 +1696,16 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-
   letter-spacing: 0.05em;
-
   color: #303032;
 }
 
 .footer-link a {
   color: #303032;
 }
+.footer-email svg{width: 15px;
+height:17px;
+fill: #636060}
 
 .footer-link:hover,
 .footer-phone:hover,
@@ -1675,7 +1729,7 @@ img {
   }
 
   .footer-nav__list {
-    width: 420px;
+    width: 400px;
   }
 }
 
@@ -1696,23 +1750,25 @@ img {
   }
 
   .footer-nav__list {
-    max-width: 200px;
+    max-width: 218px;
   }
+
 
   .footer-contact {
     width: 200px;
   }
+  .footer-phone{margin-bottom: 15px;}
 }
 
 
 /* бургер меню */
-.burger-menu {
-  display: none !important;
-}
+/* .burger-menu {
+  display: none;
+} */
 
 @media screen and (max-width: 426px) {
-  .burger-menu {
-    display: inline-flex !important;
+  .user-nav__item--burger {
+    display: inline-flex;
   }
 
   #menu {
