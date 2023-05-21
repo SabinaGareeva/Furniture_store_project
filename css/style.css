@@ -940,16 +940,13 @@ img {
 
 .chair-twilight img {
   width: 175px;
-  /* height: 169px; */
   margin-bottom: 10px;
   padding-top: 20px;
 }
 
 .chair-twilight {
   width: 270px;
-  /* height: 289px; */
   background-color: #fff;
-
   text-align: center;
   color: #303032;
   margin-bottom: 37px;
@@ -1005,9 +1002,6 @@ img {
 
 .new-chair {
   max-width: 570px;
-  /* height: 614px; */
-
-
 }
 
 .chair-white {
@@ -1277,10 +1271,6 @@ img {
 
 }
 
-
-
-
-
 /* секция с отзывами */
 .review-card {
 
@@ -1331,8 +1321,6 @@ img {
   text-align: center;
   transition: .3s opacity;
 }
-
-
 
 .review-slider {
   position: relative;
@@ -1475,6 +1463,12 @@ img {
 
 }
 
+@media (max-width:1024px) {
+  .last-change::before {
+    right: 46.5%;
+  }
+}
+
 @media (max-width:426px) {
   .last-change::before {
     display: none;
@@ -1574,10 +1568,9 @@ img {
   border: 0;
   cursor: pointer;
   z-index: 1;
-display: none;
+  display: none;
 
 }
-
 
 .change-height {
   height: 400px;
@@ -1703,9 +1696,12 @@ display: none;
 .footer-link a {
   color: #303032;
 }
-.footer-email svg{width: 15px;
-height:17px;
-fill: #636060}
+
+.footer-email svg {
+  width: 15px;
+  height: 17px;
+  fill: #636060
+}
 
 .footer-link:hover,
 .footer-phone:hover,
@@ -1757,14 +1753,12 @@ fill: #636060}
   .footer-contact {
     width: 200px;
   }
-  .footer-phone{margin-bottom: 15px;}
+
+  .footer-phone {
+    margin-bottom: 15px;
+  }
 }
 
-
-/* бургер меню */
-/* .burger-menu {
-  display: none;
-} */
 
 @media screen and (max-width: 426px) {
   .user-nav__item--burger {
