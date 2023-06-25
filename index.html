@@ -33,7 +33,7 @@
           <a class="burger-menu" href="#" aria-label="Бургер меню">
           </a>
         </li>
-        <li class="user-nav__item user-nav__item--search">
+        <li id="host" class="user-nav__item user-nav__item--search">
           <a href="#" aria-label="Поиск по сайту"><span class="visually-hidden">Поиск по сайту</span></a>
         </li>
         <li class="user-nav__item user-nav__item--cart">
@@ -41,6 +41,20 @@
         </li>
       </ul>
     </div>
+    <!-- модалка при наведении на кнопку поиск -->
+    <dialog class="modal" id="modal">
+      <section class="modal-body">
+        <button id="close-button" class="close-button"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" role="presentation" focusable="false"
+            style="display: block; fill: none; height: 16px; width: 16px; stroke-width: 3; overflow: visible;">
+            <path d="m6 6 20 20"></path>
+            <path d="m26 6-20 20"></path>
+          </svg></button>
+        <h2 class="modal-scription"> Поиск по товарам</h2>
+        <input id="text-search" type="text" placeholder="Введите товар">
+        <button id="search-button" class="search-button" type="button">Искать</button>
+      </section>
+    </dialog>
   </header>
 
   <main class="page-main">
@@ -142,6 +156,7 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide review-card">
+
             <img src="./img/avatar@2x.jpg" alt="image">
             <span class="name-review">Елена Новикова</span>
             <span class="profession-review">студентка</span>
@@ -192,78 +207,79 @@
         </nav>
         <!-- контент первого таба -->
         <div class="tabs__content tabs__content--active" data-tabs-target="chairs">
-          <div class="swiper swiper-change">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="change-height">
-                  <div class="change-chair">
-                    <span class="name-change-chair">Стул «Карамель»</span>
-                    <div>
-                      <span class="new-price">$195</span>
-                      <span class="old-price">$245</span>
+          <div class="container-swiper-2">
+            <div class="swiper swiper-change">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-my-slide">
+                  <div class="change-height">
+                    <div class="change-chair">
+                      <span class="name-change-chair">Стул «Карамель»</span>
+                      <div>
+                        <span class="new-price">$195</span>
+                        <span class="old-price">$245</span>
+                      </div>
+                      <img src="./img/chair-caramel-desktop@2x.png" alt="chair caramel">
                     </div>
-                    <img src="./img/chair-caramel-desktop@2x.png" alt="chair caramel">
+                    <button class="products-button" type="button">Купить</button>
                   </div>
-                  <button class="products-button" type="button">Купить</button>
+                </div>
+                <div class="swiper-slide">
+                  <div class="change-height">
+                    <div class="change-chair">
+                      <span class="name-change-chair">Стул «Облако»</span>
+                      <div>
+                        <span class="new-price">$200</span>
+                        <span class="old-price">$250</span>
+                      </div>
+                      <img src="./img/chair-cloud-desktop@2x.jpg" alt="chair cloud">
+                    </div>
+                    <button class="products-button" type="button">Купить</button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="change-height">
+                    <div class="change-chair">
+                      <span class="name-change-chair">Стул «Сова»</span>
+                      <div>
+                        <span class="new-price">$240</span>
+                        <span class="old-price">$260</span>
+                      </div>
+                      <img src="./img/chair-owl-desktop@2x.png" alt="chair owl">
+                    </div>
+                    <button class="products-button" type="button">Купить</button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="change-height">
+                    <div class="change-chair">
+                      <span class="name-change-chair">Стул «Мая»</span>
+                      <div>
+                        <span class="new-price">$280</span>
+                        <span class="old-price">$330</span>
+                      </div>
+                      <img src="./img/chair-maya-desktop@2x.jpg" alt="chair maya">
+                    </div>
+                    <button class="products-button" type="button">Купить</button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="change-height">
+                    <div class="change-chair">
+                      <span class="name-change-chair">Стул «Месси»</span>
+                      <div>
+                        <span class="new-price">$280</span>
+                        <span class="old-price">$305</span>
+                      </div>
+                      <img src="./img/chair-messi-desktop@2x.png" alt="chair messi">
+                    </div>
+                    <button class="products-button" type="button">Купить</button>
+                  </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="change-height">
-                  <div class="change-chair">
-                    <span class="name-change-chair">Стул «Облако»</span>
-                    <div>
-                      <span class="new-price">$200</span>
-                      <span class="old-price">$250</span>
-                    </div>
-                    <img src="./img/chair-cloud-desktop@2x.jpg" alt="chair cloud">
-                  </div>
-                  <button class="products-button" type="button">Купить</button>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="change-height">
-                  <div class="change-chair">
-                    <span class="name-change-chair">Стул «Сова»</span>
-                    <div>
-                      <span class="new-price">$240</span>
-                      <span class="old-price">$260</span>
-                    </div>
-                    <img src="./img/chair-owl-desktop@2x.png" alt="chair owl">
-                  </div>
-                  <button class="products-button" type="button">Купить</button>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="change-height">
-                  <div class="change-chair">
-                    <span class="name-change-chair">Стул «Мая»</span>
-                    <div>
-                      <span class="new-price">$280</span>
-                      <span class="old-price">$330</span>
-                    </div>
-                    <img src="./img/chair-maya-desktop@2x.jpg" alt="chair maya">
-                  </div>
-                  <button class="products-button" type="button">Купить</button>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="change-height">
-                  <div class="change-chair">
-                    <span class="name-change-chair">Стул «Месси»</span>
-                    <div>
-                      <span class="new-price">$280</span>
-                      <span class="old-price">$305</span>
-                    </div>
-                    <img src="./img/chair-messi-desktop@2x.png" alt="chair messi">
-                  </div>
-                  <button class="products-button" type="button">Купить</button>
-                </div>
-              </div>
+              <div class="swiper-scrollbar change__slider-scrollbar"></div>
+              <div class="swiper-pagination change__slider-pagination"></div>
             </div>
-            <div class="swiper-scrollbar change__slider-scrollbar"></div>
-            <div class="swiper-pagination change__slider-pagination"></div>
           </div>
-
         </div>
         <!-- контент второго таба -->
         <div class="tabs__content" data-tabs-target="sofas">
@@ -316,6 +332,7 @@
       </div>
     </div>
   </footer>
+
   <script src="js/vendor/swiper.js"></script>
   <script src="js/lib/slider-main.js"></script>
   <script src="js/lib/my-js.js"></script>

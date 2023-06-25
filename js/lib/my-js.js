@@ -1,6 +1,7 @@
 const swiper2 = new Swiper('.mySwiper', {
   slidesPerView: 1,
-  spaceBetween: 500,
+  spaceBetween: 10,
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -28,6 +29,10 @@ const swiper3 = new Swiper(".swiper-change", {
       slidesPerView: 5,
       spaceBetween: 20,
     },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 35,
+    },
     768: {
       slidesPerView: 3,
       spaceBetween: 50,
@@ -53,6 +58,20 @@ const menuList = document.querySelector('#menu'); // меню
 burger.addEventListener('click', () => {
   menuList.classList.toggle('active');
 })
+// модалка
+const modal = document.querySelector('#modal');
+const host = document.querySelector('#host');
+const closeModal = document.querySelector('#close-button');
+const searchButton = document.querySelector('#search-button');
+host.addEventListener('click', () => { 
+  modal.showModal();
+ });
+closeModal.addEventListener('click', () => {
+   modal.close();
+   });
+   searchButton.addEventListener('click', () => {
+    modal.close();
+    });
 /* tabs */
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelector('.tabs');
