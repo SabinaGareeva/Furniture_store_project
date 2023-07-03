@@ -263,7 +263,7 @@ input[type="text"] {
 }
 
 .search-button {
-  border-radius: 5px;
+
   padding: 9px;
   box-sizing: border-box;
   font-size: 16px;
@@ -1576,7 +1576,7 @@ input[type="text"] {
 
 @media (max-width:1024px) {
   .last-change::before {
-    right: 46.5%;
+    right: 46.5%; 
   }
 }
 
@@ -1733,6 +1733,7 @@ input[type="text"] {
   .change-height {
     width: 235px;
   }
+  .change-height::before {width: 235px;}
 
   .container-swiper-2 {
     margin-right: 20px;
@@ -1747,6 +1748,7 @@ input[type="text"] {
   .change-height {
     width: 232px;
   }
+  .change-height::before {width: 232px;}
 
   .container-swiper-2 {
     margin-right: 35px;
